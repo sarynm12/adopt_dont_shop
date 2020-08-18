@@ -1,3 +1,5 @@
 class Shelter < ApplicationRecord
 
-end 
+  validates_presence_of :name 
+
+end
