@@ -3,7 +3,9 @@
 <ul id="shelters">
   <% @shelters.each do |shelter| %>
     <li>
-      <%= shelter.name %>
+      <%= link_to shelter.name, shelters_path(shelter), class: 'shelter-name' %>
     </li>
   <% end %>
 </ul>
+
+<li><a href="shelters/new">New Shelter</a></li>
