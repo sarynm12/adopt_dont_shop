@@ -25,9 +25,13 @@ class SheltersController < ApplicationController
     redirect_to '/shelters'
   end
 
+  def edit
+    @shelter = Shelter.find(params[:id])
+  end
+
   def update
-    shelter = Shelter.find(params[:id])
-    shelter.update({
+    @shelter = Shelter.find(params[:id])
+    @shelter.update({
           name: params[:name],
           address: params[:address],
           city: params[:city],
@@ -35,9 +39,9 @@ class SheltersController < ApplicationController
           zip: params[:zip]
       })
 
-    task.save
+    @shelter.save
 
-    redirect_to "/tasks/#{task.id}"
+    redirect_to '/shelters/#{@shelter.id}'
   end
 
 end
