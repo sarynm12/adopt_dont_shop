@@ -1,12 +1,20 @@
-<a href="/shelters/new">New Shelter</a>
-
-<form action="/shelters" method="post">
+<form_tag = "/shelters", method: :post do %>
   <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
-  <p>Enter a new shelter:</p>
+  <h1>Enter a New Shelter</h1>
+  <label for='name'>Shelter Name:</label><br>
   <input type='text' name='shelter[name]'/><br/>
+  <br>
+  <label for='address'>Shelter Address:</label><br>
   <input type='text' name='shelter[address]'/><br/>
+  <br>
+  <label for='city'>Shelter City:</label><br>
   <input type='text' name='shelter[city]'/><br/>
+  <br>
+  <label for='state'>Shelter State:</label><br>
   <input type='text' name='shelter[state]'/><br/>
+  <br>
+  <label for='zip'>Shelter Zip:</label><br>
   <input type='text' name='shelter[zip]'/><br/>
+  <br>
   <input type='submit'/>
 </form>
