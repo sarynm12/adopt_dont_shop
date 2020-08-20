@@ -1,11 +1,8 @@
 <h1>All Shelters</h1>
 
-<ul id="shelters">
-  <% @shelters.each do |shelter| %>
-    <li>
-      <%= link_to shelter.name, shelters_path(shelter), class: 'shelter-name' %>
-    </li>
-  <% end %>
-</ul>
+<% @shelters.each do |shelter| %>
+  <a href='/shelters/<%= shelter.id %>'><%= shelter.name %></a>
+<% end %>
 
-<li><a href="shelters/new">New Shelter</a></li>
+
+<a href="shelters/new">Create New Shelter</a>
