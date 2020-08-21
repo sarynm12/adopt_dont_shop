@@ -25,13 +25,27 @@ RSpec.describe 'Shelters index page' do
       expect(page).to have_content(shelter_1.zip)
 
       shelter_2 = Shelter.create!(name: "Littleton Shelter", address: "2468 E. Orchard Rd.", city: "Littleton", state: "CO", zip: 80121)
-      
+
       visit "/shelters/#{shelter_2.id}"
 
       expect(page).to have_content(shelter_2.address)
       expect(page).to have_content(shelter_2.city)
       expect(page).to have_content(shelter_2.state)
       expect(page).to have_content(shelter_2.zip)
+    end
+  end
+
+  describe 'they visit /shelters/id and can delete a shelter' do
+    it 'can delete a shelter' do
+      shelter_1 = Shelter.create!(name: "Dumb Friends League", address: "1234 S. University Blvd.", city: "Denver", state: "CO", zip: 80209)
+
+      visit "/shelters/#{shelter_1.id}"
+
+      click_link 'Delete Shelter'
+
+      expect(current_path).to eq('/shelters')
+      expect(page).to_not have_content(shelter_1.name)
+      expect(page).to_not have_link('Delete Shelter')
     end
   end
 end

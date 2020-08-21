@@ -9,25 +9,3 @@ RSpec.describe Shelter, type: :model do
     it {should validate_presence_of(:zip)}
   end
 end
-
-
-# RSpec.describe 'Shelter has a name, address, city, state, and zip' do
-#   it 'should return shelter info' do
-#     shelter_1 = Shelter.create(name: "Dumb Friends League", address: "1234 S. University Blvd.", city: "Denver", state: "CO", zip: 80209)
-#     shelter_2 = Shelter.create(name: "Littleton Shelter", address: "2468 E. Orchard Rd.", city: "Littleton", state: "CO", zip: 80121)
-#
-#     #require "pry"; binding.pry
-#     visit '/shelters/:id'
-#
-#     expect(page).to have_content(shelter_1.name)
-#     expect(page).to have_content(shelter_1.address)
-#     expect(page).to have_content(shelter_1.city)
-#     expect(page).to have_content(shelter_1.state)
-#     expect(page).to have_content(shelter_1.zip)
-#     expect(page).to have_content(shelter_2.name)
-#     expect(page).to have_content(shelter_2.address)
-#     expect(page).to have_content(shelter_2.city)
-#     expect(page).to have_content(shelter_2.state)
-#     expect(page).to have_content(shelter_2.zip)
-#   end
-# end
