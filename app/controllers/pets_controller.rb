@@ -17,10 +17,15 @@ class PetsController < ApplicationController
     pet = shelter.pets.create!(pet_params)
   end
 
+  def show
+    @shelter = Shelter.find(params[:id])
+    @pets = Pet.all
+  end
+
   private
 
   def pet_params
-    params.permit(:image, :name, :age, :sex, :shelter_location)
+    params.permit(:image, :name, :age, :sex, :current_shelter)
   end
 
 end
