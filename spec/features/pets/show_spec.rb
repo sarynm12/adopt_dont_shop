@@ -31,7 +31,7 @@ RSpec.describe "seeing a shelter's pets" do
     end
   end
 
-  describe 'single pets page' do
+  describe 'on a single pets page' do
     it 'can delete a pet' do
       shelter_1 = Shelter.create!(name: "Dumb Friends League", address: "1234 S. University Blvd.", city: "Denver", state: "CO", zip: 80209)
       pet_1 = shelter_1.pet.create!(image: 'corgi.jpg', name: 'Hudson', description: 'Corgi', age: 2, sex: 'Male', current_shelter: 'Dumb Friends League', adoption_status: 'Adoptable')
