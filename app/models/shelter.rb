@@ -1,6 +1,6 @@
 class Shelter < ApplicationRecord
 
-  has_many :pet 
+  has_many :pet
   validates_presence_of :name
   validates_presence_of :address
   validates_presence_of :city

@@ -254,12 +254,50 @@
           null,
           1,
           1,
+          1,
           null
         ]
       },
       "/Users/sarynmooney/turing/mod2/projects/adopt_dont_shop/app/helpers/application_helper.rb": {
         "lines": [
           1,
+          null
+        ]
+      },
+      "/Users/sarynmooney/turing/mod2/projects/adopt_dont_shop/spec/features/pets/show_spec.rb": {
+        "lines": [
+          1,
+          null,
+          1,
+          1,
+          1,
+          1,
+          1,
+          null,
+          1,
+          null,
+          1,
+          1,
+          1,
+          1,
+          null,
+          null,
+          1,
+          1,
+          1,
+          1,
+          1,
+          null,
+          1,
+          null,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          null,
+          null,
           null
         ]
       },
@@ -453,16 +491,24 @@
           null,
           null,
           1,
+          1,
+          null,
+          null,
+          1,
           0,
-          null,
-          null,
-          null,
-          null,
           null,
           null,
           1,
           0,
           0,
+          0,
+          0,
+          null,
+          null,
+          null,
+          1,
+          1,
+          1,
           null,
           null,
           1,
@@ -538,6 +584,6 @@
         ]
       }
     },
-    "timestamp": 1598129374
+    "timestamp": 1598193478
   }
 }
