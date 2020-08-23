@@ -435,9 +435,14 @@
       "/Users/sarynmooney/turing/mod2/projects/adopt_dont_shop/app/models/pet.rb": {
         "lines": [
           1,
+          1,
           null,
           1,
           1,
+          null,
+          1,
+          12,
+          null,
           null,
           null
         ]
@@ -584,6 +589,6 @@
         ]
       }
     },
-    "timestamp": 1598193478
+    "timestamp": 1598205838
   }
 }

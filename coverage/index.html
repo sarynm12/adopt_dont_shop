@@ -14,7 +14,7 @@
       <img src="./assets/0.12.2/loading.gif" alt="loading"/>
     </div>
     <div id="wrapper" class="hide">
-      <div class="timestamp">Generated <abbr class="timeago" title="2020-08-23T08:37:58-06:00">2020-08-23T08:37:58-06:00</abbr></div>
+      <div class="timestamp">Generated <abbr class="timeago" title="2020-08-23T12:03:58-06:00">2020-08-23T12:03:58-06:00</abbr></div>
       <ul class="group_tabs"></ul>
 
       <div id="content">
@@ -23,14 +23,14 @@
     <span class="group_name">All Files</span>
     (<span class="covered_percent">
       <span class="green">
-  97.03%
+  97.07%
 </span>
 
      </span>
      covered at
      <span class="covered_strength">
        <span class="green">
-         1.04
+         1.1
        </span>
     </span> hits/line
     )
@@ -43,11 +43,11 @@
   </div>
 
   <div class="t-line-summary">
-    <b>202</b> relevant lines,
-    <span class="green"><b>196</b> lines covered</span> and
+    <b>205</b> relevant lines,
+    <span class="green"><b>199</b> lines covered</span> and
     <span class="red"><b>6</b> lines missed. </span>
     (<span class="green">
-  97.03%
+  97.07%
 </span>
 )
   </div>
@@ -128,11 +128,11 @@
           <tr class="t-file">
             <td class="strong t-file__name"><a href="#9f335f3e51d9dc3c8569c529bae5216d01f512a8" class="src_link" title="app/models/pet.rb">app/models/pet.rb</a></td>
             <td class="green strong cell--number t-file__coverage">100.00 %</td>
+            <td class="cell--number">11</td>
             <td class="cell--number">6</td>
-            <td class="cell--number">3</td>
-            <td class="cell--number">3</td>
+            <td class="cell--number">6</td>
             <td class="cell--number">0</td>
-            <td class="cell--number">1.00</td>
+            <td class="cell--number">2.83</td>
             
           </tr>
         
@@ -646,7 +646,7 @@
 
             
 
-            <code class="ruby">    new_pet = shelter.pets.create(pet_params)</code>
+            <code class="ruby">    new_pet = shelter.pets.new(pet_params)</code>
           </li>
         </div>
       
@@ -800,7 +800,7 @@
 
             
 
-            <code class="ruby">    params.permit(:image, :name, :age, :sex)</code>
+            <code class="ruby">    params.permit(:image, :name, :description, :age, :sex, :current_shelter, :adoption_status)</code>
           </li>
         </div>
       
@@ -1587,8 +1587,8 @@
     
 
     <div class="t-line-summary">
-      <b>3</b> relevant lines.
-      <span class="green"><b>3</b> lines covered</span> and
+      <b>6</b> relevant lines.
+      <span class="green"><b>6</b> lines covered</span> and
       <span class="red"><b>0</b> lines missed.</span>
     </div>
 
@@ -1611,24 +1611,24 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="2">
+          <li class="covered" data-hits="1" data-linenumber="2">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">  after_initialize :set_defaults</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="3">
             
             
 
             
 
             <code class="ruby"></code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="covered" data-hits="1" data-linenumber="3">
-            <span class="hits">1</span>
-            
-
-            
-
-            <code class="ruby">  belongs_to :shelter</code>
           </li>
         </div>
       
@@ -1639,12 +1639,23 @@
 
             
 
+            <code class="ruby">  belongs_to :shelter</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="5">
+            <span class="hits">1</span>
+            
+
+            
+
             <code class="ruby">  validates_presence_of :image, :name, :age, :sex, :current_shelter</code>
           </li>
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="5">
+          <li class="never" data-hits="" data-linenumber="6">
             
             
 
@@ -1655,7 +1666,51 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="6">
+          <li class="covered" data-hits="1" data-linenumber="7">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">  def set_defaults</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="12" data-linenumber="8">
+            <span class="hits">12</span>
+            
+
+            
+
+            <code class="ruby">    self.adoption_status ||= &#39;Adoptable&#39;</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="9">
+            
+            
+
+            
+
+            <code class="ruby">  end</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="10">
+            
+            
+
+            
+
+            <code class="ruby"></code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="11">
             
             
 
@@ -4698,7 +4753,7 @@
 
             
 
-            <code class="ruby">      pet_1 = shelter_1.pet.create!(image: &#39;corgi.jpg&#39;, name: &#39;Hudson&#39;, age: 2, sex: &#39;Male&#39;, current_shelter: &#39;Dumb Friends League&#39;)</code>
+            <code class="ruby">      pet_1 = shelter_1.pet.create!(image: &#39;corgi.jpg&#39;, name: &#39;Hudson&#39;, description: &#39;Corgi&#39;, age: 2, sex: &#39;Male&#39;, current_shelter: &#39;Dumb Friends League&#39;, adoption_status: &#39;Adoptable&#39;)</code>
           </li>
         </div>
       
@@ -4709,7 +4764,7 @@
 
             
 
-            <code class="ruby">      pet_2 = shelter_1.pet.create!(image: &#39;image1.jpg&#39;, name: &#39;Lucy&#39;, age: 6, sex: &#39;Female&#39;, current_shelter: &#39;Dumb Friends League&#39;)</code>
+            <code class="ruby">      pet_2 = shelter_1.pet.create!(image: &#39;image1.jpg&#39;, name: &#39;Lucy&#39;, description: &#39;Terrier Mix&#39;, age: 6, sex: &#39;Female&#39;, current_shelter: &#39;Dumb Friends League&#39;, adoption_status: &#39;Adoptable&#39;)</code>
           </li>
         </div>
       

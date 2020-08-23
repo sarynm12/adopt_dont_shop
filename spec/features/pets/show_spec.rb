@@ -17,8 +17,8 @@ RSpec.describe "seeing a shelter's pets" do
   describe 'a single pets show page' do
     it 'can render all pet attributes including description and adoption status' do
       shelter_1 = Shelter.create!(name: "Dumb Friends League", address: "1234 S. University Blvd.", city: "Denver", state: "CO", zip: 80209)
-      pet_1 = shelter_1.pet.create!(image: 'corgi.jpg', name: 'Hudson', age: 2, sex: 'Male', current_shelter: 'Dumb Friends League')
-      pet_2 = shelter_1.pet.create!(image: 'image1.jpg', name: 'Lucy', age: 6, sex: 'Female', current_shelter: 'Dumb Friends League')
+      pet_1 = shelter_1.pet.create!(image: 'corgi.jpg', name: 'Hudson', description: 'Corgi', age: 2, sex: 'Male', current_shelter: 'Dumb Friends League', adoption_status: 'Adoptable')
+      pet_2 = shelter_1.pet.create!(image: 'image1.jpg', name: 'Lucy', description: 'Terrier Mix', age: 6, sex: 'Female', current_shelter: 'Dumb Friends League', adoption_status: 'Adoptable')
 
       visit "/pets/#{pet_1.id}"
 
